@@ -6,20 +6,101 @@
     }
 }
 
+// General styles
+img {
+    height: auto;
+    max-width: 100%;
+}
+h1 {
+    margin-bottom: $spacer-sm;
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-dark;
+}
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+p {
+    margin-bottom: $spacer-md;
+}
+.required {
+    color: $required;
+}
+.button {
+    display: inline-block;
+    border: 2px $border-dark solid;
+    padding: 7px 20px;
+    color: $text-dark;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: $transition;
+    &:hover, &:active, &:focus {
+        background-color: $border-dark;
+        color: white;
+        cursor: pointer;
+    }
+}
 body {
-    color: $font-colour-dark;
+    color: $text-light;
     font-size: 12px;
     font-family: sans-serif;
 }
 
+// Header
 header {
     margin-top: $spacer-sm;
     margin-bottom: $spacer-md;
-    background-color: #6565c4;
+    background-color: #F6F6F7;
     text-align: right;
     #cart-trigger {
         display: inline-block;
         padding: $spacer-xs 0;
         font-size: 11px;
+        color: $text-light;
+    }
+}
+
+// Product Item
+.product-item {
+    margin-bottom: $spacer-md;
+    &__image {
+        margin-bottom: $spacer-md;
+        @media (min-width: 768px) {
+            width: 400px;
+            margin-bottom: 0;
+        }
+    }
+    
+    &__price {
+        margin-bottom: $spacer-sm;
+        padding: $spacer-xs 0;
+        color: $text-dark;
+        font-weight: 600;
+        @media (min-width: 768px) {
+            border-top: 1px $border-lightest solid;
+            border-bottom: 1px $border-lightest solid;
+        }
+    }
+    &__attribute-items {
+        font-size: 0;
+        margin-bottom: $spacer-sm;
+        &__attribute-item {
+            display: inline-block;
+            border: 1px $border-light solid;
+            padding: 10px 15px;
+            margin-right: $spacer-xs;
+            font-size: 12px;
+            transition: $transition;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover, &:active, &:focus, &.selected {
+                border: 2px $border-dark solid;
+                padding: 9px 14px;
+                color: $text-dark;
+                cursor: pointer;
+            }
+        }
     }
 }
