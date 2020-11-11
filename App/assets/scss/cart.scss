@@ -1,5 +1,25 @@
 @import "variables";
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1020px;
+    }
+}
+
 body {
     color: $font-colour-dark;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+header {
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-md;
+    background-color: #6565c4;
+    text-align: right;
+    #cart-trigger {
+        display: inline-block;
+        padding: $spacer-xs 0;
+        font-size: 11px;
+    }
 }
