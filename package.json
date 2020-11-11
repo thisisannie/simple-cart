@@ -1,0 +1,20 @@
+{
+  "name": "simplecart",
+  "version": "1.0.0",
+  "scripts": {
+    "css": "node-sass -w App/assets/scss/ -o App/assets/css/ --output-style compressed"
+  },
+  "devDependecies": {
+    "node-sass": "^4.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisannie/simple-cart.git"
+  },
+  "author": "Anna Kyles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisannie/simple-cart/issues"
+  },
+  "homepage": "https://github.com/thisisannie/simple-cart#readme"
+}
