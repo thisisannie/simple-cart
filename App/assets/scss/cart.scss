@@ -6,6 +6,12 @@
     }
 }
 
+// Utility classes
+.hidden {
+    visibility: none;
+    opacity: 0;
+}
+
 // General styles
 img {
     height: auto;
@@ -105,7 +111,7 @@ header {
             &:last-child {
                 margin-right: 0;
             }
-            &:hover, &:active, &:focus, &.selected {
+            &:hover, &:active, &:focus, &[data-selected="true"] {
                 border: 2px $border-dark solid;
                 padding: 9px 14px;
                 color: $text-dark;
@@ -113,7 +119,12 @@ header {
             }
         }
     }
+    #select-size-warning {
+        transition: $transition;
+    }
 }
+
+// Cart Content
 #cart-content-container {
     position: relative;
 }
