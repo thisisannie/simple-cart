@@ -66,6 +66,7 @@ header {
         border: 1px transparent solid;
         font-size: 11px;
         color: $text-light;
+        font-size: 0;
         z-index: 66;
         cursor: pointer;
         transition: $transition;
@@ -73,6 +74,16 @@ header {
             border-color: $border-light $border-light transparent $border-light;
             color: $text-dark;
             background-color: white;
+        }
+        .cart-icon {
+            width: 20px;
+        }
+        @media (min-width: 768px) {
+            font-size: inherit;
+            .cart-icon {
+                display: none;
+                opacity: 0;
+            }
         }
     }
 }
